@@ -30,7 +30,20 @@ pipeline {
         
         stage('Publish Artifacts') {
             steps {
-              cucumber buildStatus: 'UNCHANGED', customCssFiles: '', customJsFiles: '', failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber: -1, fileIncludePattern: '**/*.json', jsonReportDirectory: 'target', pendingStepsNumber: -1, reportTitle: 'FaceBook', skippedStepsNumber: -1, sortingMethod: 'ALPHABETICAL', undefinedStepsNumber: -1
+             success {
+                        cucumber buildStatus: 'null', 
+                        customCssFiles: '', 
+                        customJsFiles: '', 
+                        failedFeaturesNumber: -1, 
+                        failedScenariosNumber: -1, 
+                        failedStepsNumber: -1, 
+                        fileIncludePattern: '**/*.json', 
+                        pendingStepsNumber: -1, 
+                        skippedStepsNumber: -1, 
+                        sortingMethod: 'ALPHABETICAL', 
+                        undefinedStepsNumber: -1
+                }
+            }
             }
         }
     }
