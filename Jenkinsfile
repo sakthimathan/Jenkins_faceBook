@@ -44,7 +44,6 @@ pipeline {
                         undefinedStepsNumber: -1
                 }
             }
-            }
         }
     }
 }
